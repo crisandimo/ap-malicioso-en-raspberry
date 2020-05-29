@@ -1,4 +1,7 @@
 # ap-malicioso-en-raspberry
+
+Como parte de trabajo de grado de investigacion y desarrollo para la Universidad Minuto de Dios facultad de Ingenieria Tecnologia en Redes de Computadores y Seguridad Informatica
+
 Implementacion desarrollada como trabajo de grado para la Universidad Minuto de Dios
 IMPLEMENTACION DE UN AP MALICOSO UNTO CON PORTAL CAUTIVO Y PAYLOAD
 
@@ -8,4 +11,24 @@ En este repositorio encontrara todo lo necesario a nivel de codigo para esta imp
 
 El unico archivo indispensable para la instalacion es setup.sh los demas estan para que usted pueda validar las configuracion sin necesidad de editar los originales, prodra guiarse y determinar que ocnfiguracion deberia cambiar para ajustarlo a su preferencia.
 
-Como parte de trabajo de grado de investigacion y desarrollo para la Universidad Minuto de Dios facultad de Ingenieria Tecnologia en Redes de Computadores y Seguridad Informatica
+
+___________________________________________________________________________________________________________________________
+
+
+Este proyecto se desarrollo bajo las siguientes condiciones y caracteristicas
+
+HARDWARE
+'Raspberry pi 3 B+
+'Memoria microSD de almenos 32 Gb
+'Adaptador fuente alimentacion electrica
+
+SOFTWARE
+'Sd Card Formater
+'Win32 Disk Imager
+'Raspbian lite (el mas reciente)
+'Hostapd
+'Dnsmasq
+'Nodogsplash
+'Github
+
+
