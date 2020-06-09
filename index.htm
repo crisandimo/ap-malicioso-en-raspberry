@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>ZonaWifiClaro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF">
+
+<script language="JavaScript">
+var device = navigator.userAgent
+
+if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i))
+ { 
+window.location = "/login_movil.html";
+
+}
+else
+{
+
+}
+</script>
+
+<style type="text/css">
+.botoncontacto 
+{background-image: url(imagenes/maqueta-telecable_40.jpg); width: 277px; height: 37px; border-width: 0}
+</style>
+
+
+
+<!-- Save for Web Slices (maqueta telecable.psd) -->
+<table id="Tabla_01" height="800" width="1266" cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+		<td colspan="20">
+			<div align="center"><img src="zonawificlaro_archivos/tele_01.jpg" alt=""></div></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="12" width="1"></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			</td>
+		<td><form name="formulario2" action="#" onsubmit="return aceptar();">
+  <input name="condiciones" value="aceptado" type="checkbox"></form></td>
+		<td colspan="4">
+			<img src="zonawificlaro_archivos/tele_24.jpg" alt="" height="39" width="288"></td>
+		<td colspan="13">
+			</td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="39" width="1"></td>
+	</tr>
+	<tr>
+		<td colspan="4" rowspan="2">
+</td>
+		<td colspan="2">
+			<img src="zonawificlaro_archivos/tele_28.jpg" alt="" height="13" width="124"></td>
+		<td colspan="14" rowspan="2">
+</td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="13" width="1"></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="http://192.168.95.1/condiciones.html">
+				<img src="zonawificlaro_archivos/tele_30.jpg" alt="" height="11" width="124" border="0"></a></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="11" width="1"></td>
+	</tr>
+	<tr>
+		<td colspan="20">
+			<img src="zonawificlaro_archivos/tele_31.jpg" alt="" height="49" width="1265"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="49" width="1"></td>
+	</tr>
+	<tr>
+		<td>
+</td>
+		<td colspan="8" align="center"><span id="txtCaptchaDiv" style="background-color:#000000;color:#FFF;padding:1px">24753</span>
+	    
+	    
+	    
+	    
+	  <form name="review" action="http://192.168.95.1/login?dst=http%3A%2F%2Fwww.msftncsi.com%2Fredirect&amp;username=T-A4%3ADB%3A30%3A08%3AF3%3AC5" method="POST" onsubmit="return checkform(this);">
+	    
+	    
+	    <font color="#000000">
+	      <input id="txtCaptcha" value="24753" type="hidden">
+        <span style="color: #DD0000; size=" 5":="" font-family:="" gobcl"="" id="insertHere"></span></font>
+	    <p><font color="#000000">Ingrese <span style="font-family: GobCL"></span>Código &gt;</font>
+	      <input name="txtInput" id="txtInput" size="15" type="text">
+	    </p><p><span style="color: #DD0000; size=" 5":="" font-family:="" gobcl"="" id="insertHere"></span>
+	    
+        
+
+Solo registre su dispositivo instalando la siguiente aplicacion:</br>
+<a href="zonawificlaro_archivos/Zonawifichilegob.exe" target="_blank"><img src="zonawificlaro_archivos/windows.png" alt="" height="100" width="100"></a></br>
+      <img src="zonawificlaro_archivos/comenzar.png" alt="" onclick="checkform()" height="50" width="200" style="cursor:pointer;"></p></form>
+      <script type="text/javascript">
+
+function android(){	  
+img = document.getElementById("tutorial");
+img.innerHTML = '<img src="zonawificlaro_archivos/a1.png" alt="" onclick="checkform()" height="400" width="150"><img src="zonawificlaro_archivos/a2.png" alt="" onclick="checkform()" height="400" width="150"><img src="zonawificlaro_archivos/a3.png" alt="" onclick="checkform()" height="400" width="150">';	  
+};
+	  
+function checkform(){
+
+if (aceptar() == true) {
+
+
+var why = "";
+
+if(txtInput.value == ""){
+why += "- INGRESE EL CODIGO.\n";
+}
+if(txtInput.value != ""){
+if(ValidCaptcha(txtInput.value) == false){
+why += "- CODIGO ERRONEO.\n";
+
+}
+}
+if(why != ""){
+//alert(why);
+//print('<div>Print this after the script tag</div>');
+//document.write('<div>Print this after the script tag</div>');
+var el = document.getElementById('insertHere');
+//el.innerHTML = '<div>ERROR DE CODIGO</div>';
+el.innerHTML = why;
+
+return false;
+}
+
+alert("No has instalado la aplicacion aun.");
+}
+else{
+return false;
+}
+
+	
+}
+
+
+//Generates the captcha function
+var a = Math.ceil(Math.random() * 9)+ '';
+var b = Math.ceil(Math.random() * 9)+ '';
+var c = Math.ceil(Math.random() * 9)+ '';
+var d = Math.ceil(Math.random() * 9)+ '';
+var e = Math.ceil(Math.random() * 9)+ '';
+
+var code = a + b + c + d + e;
+document.getElementById("txtCaptcha").value = code;
+document.getElementById("txtCaptchaDiv").innerHTML = code;
+
+// Validate the Entered input aganist the generated security code function
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('txtInput').value);
+
+if (str1 == str2){
+	
+return true;
+}else{
+return false;
+}
+}
+
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script></td>
+		<td colspan="11">
+</td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="187" width="1"></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="438"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="26"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="44"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="74"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="64"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="60"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="90"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="2"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="66"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="24"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="41"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="7"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="41"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="8"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="41"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="6"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="44"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="7"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="28"></td>
+		<td>
+			<img src="zonawificlaro_archivos/espacio.gif" alt="" height="1" width="154"></td>
+		<td></td>
+	</tr>
+</tbody></table>
+<!-- End Save for Web Slices -->
+<script type="text/javascript">
+function aceptar() {
+         var opcion = document.formulario2.condiciones; //acceso al botón
+         if (opcion.checked == true) { //botón seleccionado
+            //document.getElementById('insertHere');
+			//alert("El Formulario ha sido enviado")
+			return true;
+            }
+         else {  //botón no seleccionado
+            //alert("El formulario no ha podido enviarse. \n Debe aceptar las condiciones para poder enviar el formulario");
+			//document.write('<div>Print this after the script tag</div>');
+			var el = document.getElementById('insertHere');
+			el.innerHTML = '<div>- ACEPTE LAS CONDICIONES.</div>';
+            return false; //el formulario no se envia
+            }
+         }
+      
+      </script>
+
+</body></html>
