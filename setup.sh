@@ -33,6 +33,7 @@ FirewallRule allow tcp port 443
 END
 
 #tasladamos el portal cautivo a la carpeta de configuracion de nodogsplash
+Unzip /pi/home/zonawificlaro_archivos.zip
 mv /pi/home/splash.html /etc/nodogsplash
 mv /pi/home/login_movil.html /etc/nodogsplash
 
