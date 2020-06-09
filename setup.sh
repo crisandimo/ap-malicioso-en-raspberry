@@ -1,38 +1,3 @@
-#!/bin/sh
-#    configuracion de un raspberry pi, instalacio y configuracion de ap + portal #    cautivo con exploit includo.
-#    Copyright (C) 2013-2015 Viljo Viitanen <viljo.viitanen@iki.fi> and contributors
-#
-
-#primero una actualizacion de paquetes y librerias
-apt-get update
-apt-get upgrade -y
-
-#habilitamos ssh para una conexion remota asegurada, inicio del servicio ssh
-systemctl enable ssh
-systemctl start ssh
-
-#instalacion de hostapd
-apt install hostapd || {
-  echo "No se pudo instalar hostapd" 
-  exit 1
-}
-#instalacion de dnsmasq habilitacion e inicio de servicio
-apt install dnsmasq || {
-  echo "No se pudo instalar dnsmasq" 
-  exit 1
-}
-systemctl unmask hostapd
-systemctl enable hostapd
-
-sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
-
-#configuracion del archivo dhcp.conf para determinar el gateway determina ip fija
-cat >> /etc/dhcpcd.conf << END
-echo 1 > interface wlan0
-    static ip_address=192.168.4.1/24
-    nohook wpa_supplicant
-END
-#configuracion de forward en iptables 
 cat >> /etc/sysctl.d/routed-ap.conf << END
 echo 1 > net.ipv4.ip_forward=1
 END
@@ -42,13 +7,34 @@ iptables-legacy-save
 
 mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 
-#determinamos el rano de dchp mascara ademas dle tiempo de consesion
+#determinamos el rango del dchp,mascara y le tiempo de consesion
 cat >> /etc/dnsmasq.conf << END
+#definicion de la interfaz por la que se dispersara el dhcp
 echo 1 > interface=wlan0 # Listening interface
 dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h # Pool of IP addresses served via DHCP
 domain=wlan     # Local wireless DNS domain
 address=/gw.wlan/192.168.4.1  # Alias for this router
 END
+
+#configuracion del portal cautivo
+cat >> /etc/nodogsplash.conf << END
+GatewayInterface wlan0
+Gatewayadderss 192.168.4.1
+MaxClients 250
+AuthidleTimeout 480
+#Relacion de regla en el firewall apertura de puertos 
+FirewallRuleSet users-to-router {
+FirewallRule allow udp port 53
+FirewallRule allow tcp port 53
+FirewallRule allow udp port 67
+FirewallRule allow tcp port 22
+FirewallRule allow tcp port 80
+FirewallRule allow tcp port 443
+END
+
+#tasladamos el portal cautivo a la carpeta de configuracion de nodogsplash
+mv /pi/home/splash.html /etc/nodogsplash
+mv /pi/home/login_movil.html /etc/nodogsplash
 
 rfkill unblock wlan
 
